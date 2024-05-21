@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.lksnext.parkingplantilla.databinding.ActivityLoginBinding;
 import com.lksnext.parkingplantilla.viewmodel.LoginViewModel;
 
+import android.widget.Toast;
+
 public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
@@ -48,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else {
                     //Login incorrecto
+                    binding.passwordText.setText("");
+                    Toast toast = Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG);
+                    toast.show();
                 }
             }
         });

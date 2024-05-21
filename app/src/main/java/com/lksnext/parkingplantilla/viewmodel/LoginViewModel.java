@@ -22,14 +22,13 @@ public class LoginViewModel extends ViewModel {
             //En caso de que el login sea correcto, que se hace
             @Override
             public void onSuccess() {
-                //TODO
                 logged.setValue(Boolean.TRUE);
             }
 
             //En caso de que el login sea incorrecto, que se hace
             @Override
             public void onFailure() {
-                //TODO
+                //TODO ?
                 logged.setValue(Boolean.FALSE);
             }
         });
